@@ -1,4 +1,4 @@
-﻿--Begin supergrpup.lua
+--Begin supergrpup.lua
 --Check members #Add supergroup
 local function check_member_super(cb_extra, success, result)
   local receiver = cb_extra.receiver
@@ -208,6 +208,230 @@ local function unlock_group_links(msg, data, target)
     data[tostring(target)]['settings']['lock_link'] = 'no'
     save_data(_config.moderation.data, data)
     return 'Link posting has been unlocked'
+  end
+end
+
+local function lock_group_emoji(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_emoji_lock = data[tostring(target)]['settings']['lock_emoji']
+  if group_emoji_lock == 'yes' then
+    return 'emoji posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_emoji'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'emoji posting has been locked'
+  end
+end
+
+local function unlock_group_emoji(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_emoji_lock = data[tostring(target)]['settings']['lock_emoji']
+  if group_emoji_lock == 'no' then
+    return 'emoji posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_emoji'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'emoji posting has been unlocked'
+  end
+end
+
+local function lock_group_english(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_english_lock = data[tostring(target)]['settings']['lock_english']
+  if group_english_lock == 'yes' then
+    return 'english posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_english'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'english posting has been locked'
+  end
+end
+
+local function unlock_group_english(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_english_lock = data[tostring(target)]['settings']['lock_english']
+  if group_english_lock == 'no' then
+    return 'english posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_english'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'english posting has been unlocked'
+  end
+end
+
+local function lock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'yes' then
+    return 'tag posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'tag posting has been locked'
+  end
+end
+
+local function unlock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'no' then
+    return 'tag posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'tag posting has been unlocked'
+  end
+end
+
+local function lock_group_join(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_join_lock = data[tostring(target)]['settings']['lock_join']
+  if group_join_lock == 'yes' then
+    return 'join posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_join'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'join posting has been locked'
+  end
+end
+
+local function unlock_group_join(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_join_lock = data[tostring(target)]['settings']['lock_join']
+  if group_join_lock == 'no' then
+    return 'join posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_join'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'join posting has been unlocked'
+  end
+end
+
+local function lock_group_operator(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_operator_lock = data[tostring(target)]['settings']['lock_operator']
+  if group_operator_lock == 'yes' then
+    return 'operator posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_operator'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'operator posting has been locked'
+  end
+end
+
+local function unlock_group_operator(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_operator_lock = data[tostring(target)]['settings']['lock_operator']
+  if group_operator_lock == 'no' then
+    return 'operator posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_operator'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'operator posting has been unlocked'
+  end
+end
+
+local function lock_group_number(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_number_lock = data[tostring(target)]['settings']['lock_number']
+  if group_number_lock == 'yes' then
+    return 'number posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_number'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'number posting has been locked'
+  end
+end
+
+local function unlock_group_number(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_number_lock = data[tostring(target)]['settings']['lock_number']
+  if group_number_lock == 'no' then
+    return 'number posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_number'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'number posting has been unlocked'
+  end
+end
+
+local function lock_group_badword(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_badword_lock = data[tostring(target)]['settings']['lock_badword']
+  if group_badword_lock == 'yes' then
+    return 'badword posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_badword'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'badword posting has been locked'
+  end
+end
+
+local function unlock_group_badword(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_badword_lock = data[tostring(target)]['settings']['lock_badword']
+  if group_badword_lock == 'no' then
+    return 'badword posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_badword'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'badword posting has been unlocked'
+  end
+end
+
+local function lock_group_username(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_username_lock = data[tostring(target)]['settings']['lock_username']
+  if group_username_lock == 'yes' then
+    return 'username posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_username'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'username posting has been locked'
+  end
+end
+
+local function unlock_group_username(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_username_lock = data[tostring(target)]['settings']['lock_username']
+  if group_username_lock == 'no' then
+    return 'username posting is not locked'
+  else
+    data[tostring(target)]['settings']['lock_username'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'username posting has been unlocked'
   end
 end
 
@@ -565,7 +789,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "➖➖➖➖➖➖➖➖➖\n⚙SuperGroup settings⚙\n➖➖➖➖➖➖➖➖➖\n>Lock badword : "..settings.lock_badword.."\n>Lock number : "..settings.lock_number.."\n>Lock operator : "..settings.lock_operator.."\n>Lock join : "..settings.lock_join.."\n>Lock tag : "..settings.lock_tag.."\n>Lock english : "..settings.lock_english.."\n>Lock username : "..settings.lock_username.."\n>Lock emoji : "..settings.lock_emoji.."\n>Lock links : "..settings.lock_link.."\n>Lock flood: "..settings.flood.."\n>Flood sensitivity : "..NUM_MSG_MAX.."\n>Lock spam: "..settings.lock_spam.."\n>Lock Arabic: "..settings.lock_arabic.."\n>Lock Member: "..settings.lock_member.."\n>Lock RTL: "..settings.lock_rtl.."\n>Lock Tgservice : "..settings.lock_tgservice.."\n>Lock sticker: "..settings.lock_sticker.."\n>Public: "..settings.public.."\n>Strict settings: "..settings.strict.."\n➖➖➖➖➖➖➖➖➖\n>>OMEGA_SHIELD<<"
   return text
 end
 
@@ -1654,6 +1878,38 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked link posting ")
 				return lock_group_links(msg, data, target)
 			end
+			if matches[2] == 'emoji' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked emoji posting ")
+				return lock_group_emoji(msg, data, target)
+			end
+			if matches[2] == 'english' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked english posting ")
+				return lock_group_english(msg, data, target)
+			end
+			if matches[2] == 'tag' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked tag posting ")
+				return lock_group_tag(msg, data, target)
+			end
+			if matches[2] == 'join' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked join posting ")
+				return lock_group_join(msg, data, target)
+			end
+			if matches[2] == 'operator' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked operator posting ")
+				return lock_group_operator(msg, data, target)
+			end
+			if matches[2] == 'number' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked number posting ")
+				return lock_group_number(msg, data, target)
+			end
+			if matches[2] == 'badword' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked badword posting ")
+				return lock_group_badword(msg, data, target)
+			end
+			if matches[2] == 'username' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked username posting ")
+				return lock_group_username(msg, data, target)
+			end
 			if matches[2] == 'spam' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked spam ")
 				return lock_group_spam(msg, data, target)
@@ -1697,6 +1953,38 @@ local function run(msg, matches)
 			if matches[2] == 'links' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked link posting")
 				return unlock_group_links(msg, data, target)
+			end
+			if matches[2] == 'emoji' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked emoji posting")
+				return unlock_group_emoji(msg, data, target)
+			end
+			if matches[2] == 'english' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked english posting")
+				return unlock_group_english(msg, data, target)
+			end
+			if matches[2] == 'tag' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tag posting")
+				return unlock_group_tag(msg, data, target)
+			end
+			if matches[2] == 'join' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked join posting")
+				return unlock_group_join(msg, data, target)
+			end
+			if matches[2] == 'operator' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked operator posting")
+				return unlock_group_operator(msg, data, target)
+			end
+			if matches[2] == 'number' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked number posting")
+				return unlock_group_number(msg, data, target)
+			end
+			if matches[2] == 'badword' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked badword posting")
+				return unlock_group_badword(msg, data, target)
+			end
+			if matches[2] == 'username' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked username posting")
+				return unlock_group_username(msg, data, target)
 			end
 			if matches[2] == 'spam' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked spam")
@@ -1964,7 +2252,7 @@ local function run(msg, matches)
 		end
 
 		if matches[1] == 'help' and not is_owner(msg) then
-			text = "Message /superhelp to @Teleseed in private for SuperGroup help"
+			text = "Message /superhelp to @stf_tem in private for SuperGroup help"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)

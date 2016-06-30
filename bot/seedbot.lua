@@ -239,12 +239,8 @@ An advanced administration bot based on TG-CLI written in Lua
 
 https://github.com/SEEDTEAM/TeleSeed
 
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
+Admin
+@stf_tem
 
 Special thanks to
 awkward_potato
@@ -253,62 +249,62 @@ topkecleon
 Vamptacus
 
 Our channels
-@teleseedch [English]
-@iranseed [persian]
+@h4ck_iran [persian]
 
 Our website 
-http://teleseed.seedteam.org/
+فعلا در دسترس نیست
 ]],
     help_text_realm = [[
 Realm Commands:
 
 !creategroup [Name]
-Create a group
+ایجاد گروه 
 
 !createrealm [Name]
-Create a realm
+ایجاد قلمرو
 
 !setname [Name]
-Set realm name
+عوض کردن نام گروه 
 
 !setabout [group|sgroup] [GroupID] [Text]
-Set a group's about text
+مجموعه ای در مورد متن یک گروه
 
 !setrules [GroupID] [Text]
-Set a group's rules
+
+مجموعه قوانین یک گروه
 
 !lock [GroupID] [setting]
-Lock a group's setting
+قفل تنظیمات گروه
 
 !unlock [GroupID] [setting]
-Unock a group's setting
+باز کردن یک محیط گروه
 
 !settings [group|sgroup] [GroupID]
-Set settings for GroupID
+تنظیمات مجموعه ای از مختصة GROUPID
 
 !wholist
-Get a list of members in group/realm
+یک لیست از اعضای گروه / قلمرو
 
 !who
-Get a file of members in group/realm
+دریافت فایل از اعضای گروه 
 
 !type
-Get group type
+مطلع نوع گروه
 
 !kill chat [GroupID]
-Kick all memebers and delete group
+ تمام اعضای و حذف گروه  
 
 !kill realm [RealmID]
-Kick all members and delete realm
+Kick تمام اعضای و حذف قلمرو
 
 !addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+ترویج یک مدیر توسط ID یا نام کاربری * کنید: sudo تنها
 
 !removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+تنزل مقام یک مدیر توسط ID یا نام کاربری * کنید: sudo تنها
 
 !list groups
-Get a list of all groups
+یک لیست از تمام گروه
 
 !list realms
 Get a list of all realms
@@ -346,13 +342,13 @@ This command will send text to [group_id]
 Commands list :
 
 !kick [username|id]
-You can also do it by reply
+اخراج کردن شخصی با استفاده از ایدی
 
 !ban [ username|id]
-You can also do it by reply
+تحریم کردن شخصی با استفاده از ایدی
 
-!unban [id]
-You can also do it by reply
+!unban [ایدی]
+خارج کردن از تحریم 
 
 !who
 Members list

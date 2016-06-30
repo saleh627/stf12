@@ -232,7 +232,11 @@ function create_config( )
 	"whitelist",
 	"msg_checks",
 	"info_fa",
-	"chat"
+	"chat",
+	"Welcome",
+	"plugins",
+	"saveplug",
+	"robot"
     },
     sudo_users = {188383245,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},

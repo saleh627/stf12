@@ -231,7 +231,7 @@ function create_config( )
 	"supergroup",
 	"whitelist",
 	"msg_checks",
-	"info_fa",
+	"info",
 	"chat",
 	"Welcome",
 	"plugins",

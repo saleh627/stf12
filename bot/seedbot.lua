@@ -236,7 +236,8 @@ function create_config( )
 	"Welcome",
 	"plugins",
 	"saveplug",
-	"robot"
+	"robot",
+	"date"
     },
     sudo_users = {188383245,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},

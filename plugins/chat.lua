@@ -1,51 +1,101 @@
 local function run(msg)
 if msg.text == "hi" then
-	return "Hello bb"
+	return "Hello\n"..msg.from.first_name
 end
 if msg.text == "Hi" then
-	return "Hello honey"
+	return "Hello\n"..msg.from.first_name
 end
 if msg.text == "Hello" then
-	return "Hi bb"
+	return "Hi\n"..msg.from.first_name
 end
 if msg.text == "hello" then
-	return "Hi honey"
+	return "Hi\n"..msg.from.first_name
 end
-if msg.text == "Salam" then
-	return "Salam aleykom"
+if msg.text == "slm" then
+	return "سلام\n"..msg.from.first_name
+end
+if msg.text == "Slm" then
+	return "سلام\n"..msg.from.first_name
 end
 if msg.text == "salam" then
-	return "va aleykol asalam"
+	return "سلام\n"..msg.from.first_name
 end
-if msg.text == "zac" then
-	return "Barash bezan sak"
+if msg.text == "Salam" then
+	return "سلام\n"..msg.from.first_name
 end
-if msg.text == "Zac" then
-	return "Barash bezan sak"
+if msg.text == "خوبی" then
+	return "فدات تو خوبی؟"
 end
-if msg.text == "ZAC" then
-	return "Barash bezan sak"
+if msg.text == "چه خبر" then
+	return "سلامتی خبری نیس"
 end
-if msg.text == "Umbrella" then
-	return "Yes?"
+if msg.text == "چخبر" then
+	return "سلامتی خبری نیس"
 end
-if msg.text == "umbrella" then
-	return "What?"
+if msg.text == "mrhalix" then
+	return "با بابا امینم چکار داری؟"
+end
+if msg.text == "Mrhalix" then
+	return "با بابا امینم چکار داری؟"
+end
+if msg.text == "امیر" then
+	return "مای فادِر بیا کارت دارن"
+end
+if msg.text == "صالح" then
+	return "مای فادِر بیا کارت دارن"
+end
+if msg.text == "ممشوتک" then
+	return "نگاییدم"
+end
+if msg.text == "mamshotak" then
+	return "ممه هاش تکه😂"
+end
+if msg.text == "Mamshotak" then
+	return "ممه هاش تکه😂"
+end
+if msg.text == "نوا" then
+	return "چس اسپمر نگاییدم"
+end
+if msg.text == "نووا" then
+	return "چس اسپمر نگاییدم"
+end
+if msg.text == "nova" then
+	return "چس اسپمر نگاییدم"
+end
+if msg.text == "Nova" then
+	return "چس اسپمر نگاییدم"
+end
+if msg.text == "صالح کیه" then
+	return "بابامه"
+end
+if msg.text == "ربات" or msg.text == "بوت" then
+	return "بلی?"
 end
 if msg.text == "bot" then
-	return "hum?"
+	return "هوم؟"
 end
-if msg.text == "Bot" then
-	return "Huuuum?"
+if msg.text == "xy" then
+	return "😐چخه"
 end
-if msg.text == "?" then
-	return "Hum??"
+if msg.text == "Xy" then
+	return "😐چخه"
 end
-if msg.text == "Bye" then
-	return "Babay"
+if msg.text == "؟" then
+	return ":|"
 end
 if msg.text == "bye" then
-	return "Bye Bye"
+	return "Bye\n"..msg.from.first_name
+end
+if msg.text == "Bye" then
+	return "Bye\n"..msg.from.first_name
+end
+if msg.text == "بای" then
+	return "خدافظ\n"..msg.from.first_name
+end
+if msg.text == "سلام" and is_sudo(msg) then
+  return "😐✋سلام مای فادِر"
+   else
+	return "😐✋سلام\n"..msg.from.first_name
 end
 end
 
@@ -55,12 +105,25 @@ return {
 	patterns = {
 		"^[Hh]i$",
 		"^[Hh]ello$",
-		"^[Zz]ac$",
-		"^ZAC$",
+		"^[Xx]y$",
+		"^ممشوتک$",
+   "^نوا$",
+   "^نووا$",
+   "^بای$",
+   "^سلام$",
+   "^خوبی$",
+   "^امیر$",
+   "^صالح$",
+   "^چه خبر$",
+   "^چخبر$",
+   "^[Tt]elebd$",
+   "^[Mm]rhalix$",
+   "^[Mm]amshotak$",
+   "^[Nn]ova$",
 		"^[Bb]ot$",
-		"^[Uu]mbrella$",
+		"^امبرلا$",
 		"^[Bb]ye$",
-		"^?$",
+		"^؟$",
 		"^[Ss]alam$",
 		}, 
 	run = run,
